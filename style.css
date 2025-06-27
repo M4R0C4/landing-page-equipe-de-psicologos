@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('/dist/motions/motion.css');
+
+:root {
+    --font-title: Montserrat, sans-serif;
+    --font-subtitle: Red Hat Display, sans-serif;
+    --title-color: #4c0b00;
+    --subtitle-color: #897f03;
+    --background: -webkit-linear-gradient(180deg, #e0f7fa, #f0f4c3);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: #111;
+    line-height: 1.6;
+    width: 100vw;
+}
+
+
+header,
+section,
+footer {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: var(--font-title);
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--font-subtitle);
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    font-family: var(--font-title);
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hero-image {
+    border-radius: 20px;
+    height: 80vh;
+    width: 35vw;
+}
+.logo{
+    width: 40%;
+    height: 40%;    
+}
+.hero-content {
+    margin-right: 20px;
+
+}
+.cta-content {
+    text-align: center;
+    margin: 20px 0;
+}
+.cta-button {
+    background-color: #ccff00;
+    color: #000;
+    padding: 2rem 3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+.cta-button:hover {
+    background-color: blue;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2rem;
+    margin: 20px 0;
+    padding: 20px;
+    height: 100%;
+}
+
+.social-proof img,
+.benefits img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.logos-clientes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logos-clientes img {
+    width: 92px;
+}
+
+.benefits,
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+.testimonials blockquote {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+blockquote {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+blockquote img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+blockquote footer{
+    font-style: italic;
+    font-weight: 800;
+}
+
+.faq {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.accordion-button{
+    background-color: #F0F4C5;
+    font-size: 2rem;
+    border-bottom: #000 solid 1px;
+}
+
+.final{
+    background-image: url(./imagens/background-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height:60vh;
+    padding-top: 5rem;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+footer {
+    text-align: center;
+    border: none;
+    padding: 0;
+    margin: 0
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        font-family: var(--font-title);
+        color: var(--title-color);
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 1rem;
+        margin: 0 2.8rem;
+        padding: 1rem;
+    }
+    .hero-image{
+        display: none;
+    }
+    .hero-content{
+    margin:0;
+    }
+    .hero {
+    text-align: center; 
+    padding: 0 1rem;
+    }
+    .hero img {
+    margin-top: 20px;
+    }
+    .container{
+    padding: 2rem 1rem;
+    width: 100%;
+    }
+    .testimonials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    blockquote{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding: 0 1rem;
+    }
+    blockquote p{
+        margin: 0 1rem;
+        padding: 0 ;
+    }
+    .benefit img{
+        width: 250px;
+        height: 300px;
+    }
+    blockquote footer{
+        font-weight: 600;
+        font-style: italic;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .cta-button{
+        font-size: 1rem;
+        padding: 20px;
+    }
+    .final{
+        display: none;
+    }
+}
